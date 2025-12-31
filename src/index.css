@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'SF Pro Display', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: #050807;
+  color: #f0fdf4;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(16, 185, 129, 0.3);
+  color: #f0fdf4;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 198, 198, 0.15);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 198, 198, 0.25);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(156, 198, 198, 0.4);
+}
+
+input:focus,
+textarea:focus {
+  border-color: rgba(52, 211, 153, 0.3) !important;
+  box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.08);
+}
+
+.btn-hover:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 32px rgba(16, 185, 129, 0.2);
+}
+
+.btn-hover:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.glass-hover:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(6, 78, 59, 0.25);
+}
+
+.avatar-hover:hover {
+  transform: scale(1.02);
+}
+
+.input-focus:focus {
+  border-color: rgba(52, 211, 153, 0.3);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-out;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.5s ease-out;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  body {
+    min-height: -webkit-fill-available;
+  }
+}
