@@ -1,0 +1,18 @@
+src/
+ ├─ assets/
+ │   ├─ audio/
+ │   │   └─ README.md
+ │   ├─ images/
+ │   └─ video/
+ ├─ components/
+ │   ├─ AudioController.tsx
+ │   ├─ AudioManager.ts
+ │   ├─ HiddenGarden.tsx
+ │   └─ PlanPreview.tsx
+ ├─ data/
+ │   └─ gardenMedia.ts
+ ├─ pages/
+ │   └─ Home.tsx
+ └─ App.tsx
+public/
+ └─ favicon.ico
